@@ -1,16 +1,29 @@
+// Sass variables
+$darkBackgroundColor: #e2d6d1;
+$lightBackgroundColor: #fff1e6;
+$headerHeight: 200px;
+$cardHeight: 200px;
+$cardWidth: 200px;
+$contactPadding: 10px;
+$bigFontSize: 20px;
+$middleFontSize: 18px;
+$blueTextColor: #083b75;
+$defaultTextColor: black;
+
+// Styles
 body {
     height: 100vh;
     margin: 0;
-    background-color: #fff1e6;
+    background-color: $lightBackgroundColor;
     font-family: "Times New Roman", Times, serif;
     display: grid;
-    grid-template-rows: 200px 2fr 1fr;
+    grid-template-rows: $headerHeight 2fr 1fr;
     grid-template-columns: 1fr;
   }
 
   @media screen and (min-width: 750px) {
     body{
-      grid-template-rows: 200px 2fr 1fr;
+      grid-template-rows: $headerHeight 2fr 1fr;
       grid-template-columns: repeat(3, minmax(250px, 1fr));
     }
     
@@ -29,7 +42,7 @@ body {
   }
   
   .header__h1 {
-    color: black;
+    color: $defaultTextColor;
   }
   
   .header__h1--white {
@@ -43,8 +56,8 @@ body {
   
   .card {
     place-self: center;
-    height: 200px;
-    width: 200px;
+    height: $cardHeight;
+    width: $cardWidth;
     border: 1px solid black;
     margin: 5px;
   }
@@ -55,8 +68,8 @@ body {
     align-items: center;
     height: 50%;
     width: 100%;
-    background-color: #e2d6d1;
-    font-size: 20px;
+    background-color: $darkBackgroundColor;
+    font-size: $bigFontSize;
   }
   
   .card__title--bold {
@@ -64,7 +77,7 @@ body {
   }
   
   .card__title--blue {
-    color: #083b75;
+    color: $blueTextColor;
   }
   
   .card__description {
@@ -82,19 +95,19 @@ body {
   .contact {
     grid-column: 1 / -1;
     text-align: center;
-    background-color: #e2d6d1;
-    padding: 10px;
+    background-color: $darkBackgroundColor;
+    padding: $contactPadding;
   }
   
   .contact__p {
-    color: black;
+    color: $defaultTextColor;
   }
   
   .contact__p--big-font {
-    font-size: 18px;
+    font-size: $middleFontSize;
   }
   .contact__p--blue {
-    color: #083b75;
+    color: $blueTextColor;
   }
   
   .contact__p--bold {
