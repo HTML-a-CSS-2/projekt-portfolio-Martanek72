@@ -1,103 +1,98 @@
-body {
-    height: 100vh;
-    margin: 0;
-    background-color: #fff1e6;
-    font-family: "Times New Roman", Times, serif;
+html, body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 200px 2fr 1fr;
+  grid-template-columns: repeat(1, minmax(250px, 1fr));
+  background-color: #fff1e6;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+@media screen and (min-width: 750px) {
+  .container {
     display: grid;
     grid-template-rows: 200px 2fr 1fr;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
   }
+}
+.header {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(images/house.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.header__h1 {
+  font-family: "Times New Roman", Times, serif;
+  color: black;
+}
+.header__h1--white {
+  color: white;
+}
+.header__h1--black-shadow {
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+}
 
-  @media screen and (min-width: 750px) {
-    body{
-      grid-template-rows: 200px 2fr 1fr;
-      grid-template-columns: repeat(3, minmax(250px, 1fr));
-    }
-    
-  }
-  
+.card {
+  place-self: center;
+  width: 210px;
+  height: 210px;
+  border: 1px solid black;
+  margin: 5px;
+}
+.card:hover, .card:focus {
+  transform: scale3d(1.02, 1.02, 1);
+}
+.card__title {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e2d6d1;
+  font-size: 20px;
+}
+.card__title--bold {
+  font-weight: bold;
+}
+.card__title--blue {
+  color: #083b75;
+}
+.card__description {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card__description--white-background {
+  background-color: white;
+}
 
-  .header {
-    grid-column: 1 / -1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(images/house.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-  
-  .header__h1 {
-    color: black;
-  }
-  
-  .header__h1--white {
-    color: white;
-  }
-  
-  .header__h1--black-shadow {
-    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
-  }
-
-  
-  .card {
-    place-self: center;
-    height: 200px;
-    width: 200px;
-    border: 1px solid black;
-    margin: 5px;
-  }
-  
-  .card__title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50%;
-    width: 100%;
-    background-color: #e2d6d1;
-    font-size: 20px;
-  }
-  
-  .card__title--bold {
-    font-weight: bold;
-  }
-  
-  .card__title--blue {
-    color: #083b75;
-  }
-  
-  .card__description {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50%;
-    width: 100%;
-  }
-  
-  .card__description--white-background {
-    background-color: white;
-  }
-  
-  .contact {
-    grid-column: 1 / -1;
-    text-align: center;
-    background-color: #e2d6d1;
-    padding: 10px;
-  }
-  
-  .contact__p {
-    color: black;
-  }
-  
-  .contact__p--big-font {
-    font-size: 18px;
-  }
-  .contact__p--blue {
-    color: #083b75;
-  }
-  
-  .contact__p--bold {
-    font-weight: bold;
-  }
-  
+.contact {
+  grid-column: 1/-1;
+  text-align: center;
+  background-color: #e2d6d1;
+  padding: 10px;
+}
+.contact__p {
+  color: black;
+}
+.contact__p--big-font {
+  font-size: 18px;
+}
+.contact__p--blue {
+  color: #083b75;
+}
+.contact__p--bold {
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */
