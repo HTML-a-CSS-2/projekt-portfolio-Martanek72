@@ -1,4 +1,6 @@
-// Sass variables
+// ******************************************
+// *** Sass variables
+// ******************************************
 $darkBackgroundColor: #e2d6d1;
 $lightBackgroundColor: #fff1e6;
 $headerHeight: 200px;
@@ -6,12 +8,14 @@ $cardHeight: 210px;
 $cardWidth: 210px;
 $minCardColumnWidth: 250px;
 $contactPadding: 10px;
-$bigFontSize: 20px;
-$middleFontSize: 18px;
+$bigFontSize: 18px;
+$middleFontSize: 16px;
 $blueTextColor: #083b75;
 $defaultTextColor: black;
 
-// Sass mixins
+// ******************************************
+// *** Sass mixins
+// ******************************************
 @mixin grid($numberOfColumns) {
   display: grid;
   grid-template-rows: $headerHeight 2fr 1fr;
@@ -29,7 +33,10 @@ $defaultTextColor: black;
   height: $heightOfElement;
 }
 
-// Styles
+
+// ******************************************
+// *** Styles
+// ******************************************
 html, body {
   height: 100vh;
   margin: 0;
@@ -44,17 +51,14 @@ html, body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-@media screen and (min-width: 750px) {
-  .container {
-    // Grid with three columns
-    @include grid(3);
-  }
-}
 
+// ******************************************
+// *** Header
+// ******************************************
 .header {
   grid-column: 1 / -1;
   @include flex;
-  background-image: url(images/house.jpg);
+  background-image: url(images/house_600w.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -62,6 +66,7 @@ html, body {
   &__h1 {
     font-family: 'Times New Roman', Times, serif;
     color: $defaultTextColor;
+    text-align: center;
   }
 
   &__h1--white {
@@ -73,19 +78,34 @@ html, body {
   }
 }
 
+// ******************************************
+// *** Main
+// ******************************************
 .card {
   place-self: center;
   @include sizeOfElement($cardWidth, $cardHeight);
   border: 1px solid black;
   margin: 5px;
+  box-shadow: 2px 2px 2px rgba(99, 98, 98, 0.7);
 
   &:hover,
   &:focus {
     transform: scale3d(1.02, 1.02, 1);
   }
 
+  &__icon {
+    @include sizeOfElement(100%, 30%);
+    @include flex;
+    background-color: $darkBackgroundColor;
+
+    img {
+      width: 25%;
+    }
+  
+  }
+  
   &__title {
-    @include sizeOfElement(100%, 50%);
+    @include sizeOfElement(100%, 20%);
     @include flex;
     background-color: $darkBackgroundColor;
     font-size: $bigFontSize;
@@ -109,10 +129,22 @@ html, body {
   }
 }
 
-.contact {
+// ******************************************
+// *** Footer - contact
+// ******************************************
+
+.footer {
   grid-column: 1 / -1;
-  text-align: center;
   background-color: $darkBackgroundColor;
+  @include flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact {
+  display: inline-block;
+  text-align: center;
   padding: $contactPadding;
 
   &__p {
@@ -130,6 +162,52 @@ html, body {
   &__p--bold {
     font-weight: bold;
   }
+}
 
+
+.photo {
+  max-width: 25%;
+
+  &__img {
+    max-width: 100%;
+    margin: 5px;
+  }
+}
+
+.photo--visibility {
+  display: none;
+
+  @media screen and (min-width: 750px) {
+    display: block;
+  }
+}
+
+// ******************************************
+// *** Media queries
+// ******************************************
+
+@media screen and (min-width: 600px) {
+  .header {
+    background-image: url(images/house_1200w.jpg);
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .container {
+    // Grid with three columns
+    @include grid(3);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header {
+    background-image: url(images/house_2000w.jpg);
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .header {
+    background-image: url(images/house_3000w.jpg);
+  }
 }
 

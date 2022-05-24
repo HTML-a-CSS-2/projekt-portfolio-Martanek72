@@ -17,6 +17,9 @@
       </div>
       <!-- Main -->
       <div class="card">
+        <div class="card__icon">
+          <img src="images/documents_icon.svg" alt="Ikonka dokumentů" />
+        </div>
         <div class="card__title card__title--blue card__title--bold">
           Dokumenty
         </div>
@@ -29,6 +32,9 @@
       </div>
 
       <div class="card">
+        <div class="card__icon">
+          <img src="images/people_icon.svg" alt="Ikonka členů" />
+        </div>
         <div class="card__title card__title--blue card__title--bold">
           Členové
         </div>
@@ -38,6 +44,9 @@
       </div>
 
       <div class="card">
+        <div class="card__icon">
+          <img src="images/gallery_icon.svg" alt="Ikonka galerie" />
+        </div>
         <div class="card__title card__title--blue card__title--bold">
           Fotogalerie
         </div>
@@ -47,24 +56,86 @@
       </div>
 
       <!-- Footer - contact -->
-      <div class="contact">
-        <p
-          class="contact__p contact__p--big-font contact__p--blue contact__p--bold"
-        >
-          Společenství vlastníků Okružní 1962, 1963
-        </p>
-        <p class="contact__p">
-          Okružní 1963/46 <br />
-          Žďár nad Sázavou<br />
-          591 01 <br />
-        </p>
-        <p class="contact__p contact__p--bold">IČ: 27688615</p>
-        <p>
-          E-mail:
-          <a href="mailto:okruzni1962.1963@seznam.cz"
-            >okruzni1962.1963@seznam.cz</a
-          ><br />
-        </p>
+      <div class="footer">
+        <div class="photo">
+          <!-- <img
+            src="images/vchod_44_600w.jpg"
+            alt="foto vchodu č. 44"
+            srcset="
+              https://via.placeholder.com/300   300w,
+              https://via.placeholder.com/600   600w,
+              https://via.placeholder.com/1200 1200w,
+              https://via.placeholder.com/2000 2000w
+            "
+          /> -->
+          <img  class="photo__img" src="images/vchod_44_600w.jpg" 
+            alt="foto vchodu č. 44"
+        srcset="
+        images/vchod_44_300w.jpg 300w,
+        images/vchod_44_600w.jpg 600w,
+        images/vchod_44_1200w.jpg 1200w,
+        images/vchod_44_2000w.jpg 2000w"
+        />
+        </div>
+        <div class="contact">
+          <p
+            class="contact__p contact__p--big-font contact__p--blue contact__p--bold"
+          >
+            Společenství vlastníků Okružní 1962, 1963
+          </p>
+          <p class="contact__p">
+            Okružní 1963/46 <br />
+            Žďár nad Sázavou<br />
+            591 01 <br />
+          </p>
+          <p class="contact__p contact__p--bold">IČ: 27688615</p>
+          <p>
+            E-mail:
+            <a href="mailto:okruzni1962.1963@seznam.cz"
+              >okruzni1962.1963@seznam.cz</a
+            ><br />
+          </p>
+        </div>
+        <div class="photo photo--visibility">
+          <!-- <picture class="imageRight">
+            <source
+              media="(min-width: 1024px)"
+              srcset="https://via.placeholder.com/2000"
+            />
+            <source
+              media="(min-width: 600px)"
+              srcset="https://via.placeholder.com/1200"
+            />
+            <source
+              media="(min-width: 300px)"
+              srcset="https://via.placeholder.com/600"
+            />
+            <source
+              media="(min-width: 200px)"
+              srcset="https://via.placeholder.com/300"
+            />
+            <img src="images/vchod_46_600w.jpg" alt="foto vchodu č. 46" />
+          </picture> -->
+          <picture>
+            <source
+              media="(min-width: 1024px)"
+              srcset="images/vchod_46_2000w.jpg"
+            />
+            <source
+              media="(min-width: 600px)"
+              srcset="images/vchod_46_1200w.jpg"
+            />
+            <source
+              media="(min-width: 300px)"
+              srcset="images/vchod_46_600w.jpg"
+            />
+            <source
+              media="(min-width: 200px)"
+              srcset="images/vchod_46_300w.jpg"
+            />
+            <img class="photo__img" src="images/vchod_46_600w.jpg" alt="foto vchodu č. 46" />
+          </picture>
+        </div>
       </div>
     </div>
   </body>
